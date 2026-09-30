@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "yg_events",
+	"version": "${version}",
+	"name": "yunxigames 事件",
+	"description": "全局事件系统：青蛙雨/天降陨石/雷池/血月/福到，常驻 Boss 条 HUD，以及猎杀悬赏支线任务。（Bingo 已拆分为独立的 yg-bingo 包）",
+	"authors": [
+		"Yunqingqingxi"
+	],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.yunxigames.YunxiGamesEvents"
+		]
+	},
+	"depends": {
+		"fabricloader": "~0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
