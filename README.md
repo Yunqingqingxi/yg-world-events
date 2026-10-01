@@ -51,6 +51,11 @@ v1.14 起陨石不再是「玩家附近直接爆炸」，而是**从天而降的
 > ⚠️ Boss 条和打龙 / 凋灵等原版 Boss 条挤在同一屏幕位置，
 > 同屏出现多个 Boss 条时由客户端自行堆叠。不想要就 `eventHudEnabled` / `bountyHudEnabled`。
 
+## 游戏内命令（`/yg events`）
+
+需要管理员权限（权限等级 2）。`/yg events` 查看状态；`/yg events off` 同时停掉
+全局事件与猎杀悬赏两条线（进行中的事件自然结束，各子事件开关保持不变），`on` 恢复。
+
 ## 四、配置（`config/yg-events.json`）
 
 | 字段 | 默认 | 说明 |

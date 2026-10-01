@@ -1,6 +1,8 @@
 package com.yunxigames;
 
+import com.yunxigames.command.EventsCommand;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +19,10 @@ public class YunxiGamesEvents implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// 游戏内命令：/yg events on|off|status（同时切全局事件与悬赏两条线）
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) ->
+				EventsCommand.register(dispatcher));
+
 		Bounties.register();
 		GlobalEvents.register();
 
